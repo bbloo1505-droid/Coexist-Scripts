@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { cn } from "./utils";
 
 type SpeechCard = {
@@ -28,7 +28,7 @@ const SPEECH_CARDS: SpeechCard[] = [
   {
     section: "Mary Cairncross history",
     lines: [
-      "Mary Cairncross isn't just a nice bit of forest â€” it's one of the last remaining patches of subtropical rainforest left on the Blackall Range.",
+      "Mary Cairncross isn't just a nice bit of forest — it's one of the last remaining patches of subtropical rainforest left on the Blackall Range.",
     ],
   },
   {
@@ -46,7 +46,7 @@ const SPEECH_CARDS: SpeechCard[] = [
   {
     section: "Mary Cairncross history",
     lines: [
-      "The reason this patch still exists today is largely because the Thynne family â€” pronounced \"thin\" â€” chose to protect the land rather than clear it.",
+      "The reason this patch still exists today is largely because the Thynne family — pronounced \"thin\" — chose to protect the land rather than clear it.",
     ],
   },
   {
@@ -58,7 +58,7 @@ const SPEECH_CARDS: SpeechCard[] = [
   {
     section: "Mary Cairncross history",
     lines: [
-      "They named the reserve in honour of their mother, Mary Thynne, whose maiden name was Cairncross â€” pronounced \"care-n-cross.\"",
+      "They named the reserve in honour of their mother, Mary Thynne, whose maiden name was Cairncross — pronounced \"care-n-cross.\"",
     ],
   },
   {
@@ -100,7 +100,13 @@ const SPEECH_CARDS: SpeechCard[] = [
   {
     section: "SCEP project",
     lines: [
-      "The project is aiming to restore around 65 hectares of cleared pasture back into rainforest and wetlands over the coming decades.",
+      "SCEP is basically a once-in-a-generation project to restore 65 hectares of cleared pasture beside Mary Cairncross back into rainforest and wetlands over the coming decades.",
+    ],
+  },
+  {
+    section: "SCEP project",
+    lines: [
+      "It'll eventually include things like walking trails, treetop boardwalks, research and education spaces, wildlife habitat and community areas — all designed around balancing ecological restoration with respectful human connection to nature.",
     ],
   },
   {
@@ -135,7 +141,7 @@ const SPEECH_CARDS: SpeechCard[] = [
   {
     section: "Co-Exist section",
     lines: [
-      "For those who are new, Co-Exist was started to create environmental events that felt more welcoming and community-driven for younger people â€” less intimidating, more connection and more getting outdoors together.",
+      "For those who are new, Co-Exist was started to create environmental events that felt more welcoming and community-driven for younger people — less intimidating, more connection and more getting outdoors together.",
     ],
   },
   {
@@ -146,12 +152,26 @@ const SPEECH_CARDS: SpeechCard[] = [
   },
   {
     section: "Co-Exist section",
-    lines: ["And our next event this month is [insert event]."],
+    lines: [
+      "Our next event is with Connective State on Saturday the 23rd of May at Coolum Beach.",
+    ],
+  },
+  {
+    section: "Co-Exist section",
+    lines: [
+      "We'll be meeting at 7am in front of the Coolum Beach Surf Club for free yoga and breathwork followed by a beach clean-up.",
+    ],
+  },
+  {
+    section: "Co-Exist section",
+    lines: [
+      "We'll also have two giveaway bags on the day with things like recovery vouchers, cacao, mushroom coffee, Co-Exist merch and a few other goodies.",
+    ],
   },
   {
     section: "Closing",
     lines: [
-      "But yeah â€” take your time today, keep your eyes up in the canopy, ears open for whipbirds, and enjoy the forest.",
+      "But yeah — take your time today, keep your eyes up in the canopy, ears open for whipbirds, and enjoy the forest.",
     ],
   },
 ];
@@ -178,7 +198,7 @@ function useWakeLock(active: boolean) {
           lockRef.current = null;
         });
       } catch {
-        /* user gesture / unsupported â€” ignore */
+        /* user gesture / unsupported — ignore */
       }
     };
 
