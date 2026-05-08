@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-dvh antialiased;
+  }
+}
+
+@layer components {
+  .tap-target {
+    @apply min-h-[48px] min-w-[48px];
+  }
+}
